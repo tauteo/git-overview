@@ -87,3 +87,12 @@ Choose your directory and a name for the repository (the default is the same as 
 
 [1]: <https://git-scm.com/book/en/v2>
 [2]: <https://nvie.com/posts/a-successful-git-branching-model/>
+[3]: <https://www.sourcetreeapp.com/>
+
+[i1]: <https://git-scm.com/book/en/v2/images/centralized.png>
+[i2]: <https://git-scm.com/book/en/v2/images/distributed.png>
+[i3]: <https://git-scm.com/book/en/v2/images/deltas.png>
+[i4]: <https://git-scm.com/book/en/v2/images/snapshots.png>
+[i5]: <https://git-scm.com/book/en/v2/images/areas.png>
+[i6]: ./images/cmd-init.png
+[i7]: ./images/srctree-init.png
