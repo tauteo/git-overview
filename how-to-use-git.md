@@ -87,6 +87,30 @@ In Sourcetree, you can create a new repository by either clicking on `File->Clon
 
 Choose your directory and a name for the repository (the default is the same as the directory name), and click on `Create`. This will create a Git repository in the directory and will automatically open the repository in Sourcetree.
 
+### Cloning a repository
+
+In order to make a copy of a repository that is linked to the source repository, we need to make a "clone". As mentioned previously, this makes an exact copy (all files and complete file history) of the remote repository in the local destination.
+
+The remote repository can be any repository for which you have a valid, reachable url. This means that the repository could be on a server that exposes the repo via `http` or `https`, or it could be a directory on a shared network drive (perhaps accessible using SSH), or it could simply be another directory on the same machine. As long as the url is valid, Git will be able to make a copy. Although there are many options, servers like Bitbucket or GitHub usually allow interfacing via `http`, `https`, or `ssh` only.
+
+When cloning a repo, it is worth noting that the cloning process will create a directory for the repo. There is thus no need to create the directory manually.
+
+#### Cloning a repository from the command line
+
+Simply change directory to the directory in which you want the repo directory to be located. Then execute the command `git clone <url>`.
+
+![git clone from cmd line][i8]
+
+#### Cloning a repository from Sourcetree
+
+Cloning from Sourctree is also simple. Either click on `File->Clone/New`, or click on `Clone` from the repository tab. This will open up the "Clone" dialog, where you need to specify the remote url and the local destination directory. The name is inferred from the remote repo name.
+
+![git clone from sourctree][i9]
+
+### Recording changes
+
+
+
 [1]: <https://git-scm.com/book/en/v2>
 [2]: <https://nvie.com/posts/a-successful-git-branching-model/>
 [3]: <https://www.sourcetreeapp.com/>
@@ -98,3 +122,5 @@ Choose your directory and a name for the repository (the default is the same as 
 [i5]: <https://git-scm.com/book/en/v2/images/areas.png>
 [i6]: ./images/cmd-init.png
 [i7]: ./images/srctree-init.png
+[i8]: ./images/cmd-clone.png
+[i9]: ./images/srctree-clone.png
