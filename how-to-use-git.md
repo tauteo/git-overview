@@ -144,12 +144,20 @@ We can tell Git to track changes to this file by using the `git add <pattern>` c
 
 This has immediately moved the file to the staging area, ready to be committed. Once committed, the file will be tracked and Git will pick up any changes that are made to it.
 
+#### Commit a change
+
+We can commit the change using the command `git commit`.
+
+Every commit must have a commit message, which is a short message that describes the change that is made by applying this commit. It is usually written in the imperative tense (i.e. "Add", not "Adding" or "Added"), and aims to complete the sentence "When applied, this commit will...". You can read more about what constitutes a good commit message in [A note about git commit messages][lnk4].
+
+![git commit message in editor][i14]
+
+If you do not specify a commit message as part of the command, Git opens the default text editor for you in order to allow you to enter a message. The commit proceeds once you close the file with the commit message. If the message is very short, you can include it as part of the command with the `-m` option, like so: `git commit -m "Add file hello.txt"`
 
 
 
-[1]: <https://git-scm.com/book/en/v2>
-[2]: <https://nvie.com/posts/a-successful-git-branching-model/>
-[3]: <https://www.sourcetreeapp.com/>
+
+[lnk4]: <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
 
 [i1]: <https://git-scm.com/book/en/v2/images/centralized.png>
 [i2]: <https://git-scm.com/book/en/v2/images/distributed.png>
@@ -164,3 +172,4 @@ This has immediately moved the file to the staging area, ready to be committed. 
 [i11]: ./images/cmd-emptystatus.png
 [i12]: ./images/cmd-untrackedstatus.png
 [i13]: ./images/cmd-addfilestatus.png
+[i14]: ./images/cmd-commit.png
