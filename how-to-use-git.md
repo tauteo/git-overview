@@ -126,6 +126,16 @@ There are several commands that you use to interact with files and the repositor
 * `git rm` (remove the file from the repo, file becomes untracked)
 * `git mv` (move the file to a different location, but keeps the history)
 
+#### Repo status
+
+Initially, with an empty repo, `git status` will have nothing to report. You will notice that Git has, by default created a `master` branch. This is the main branch or trunk of the repo, although there is nothing special about the name "master" (you could rename it if you wish).
+
+![git status on empty repo][i11]
+
+As soon as we add a file to the directory, Git picks it up and reports it as *untracked*.
+
+![git status untracked file][i12]
+
 
 
 
@@ -143,3 +153,5 @@ There are several commands that you use to interact with files and the repositor
 [i8]: ./images/cmd-clone.png
 [i9]: ./images/srctree-clone.png
 [i10]: <https://git-scm.com/book/en/v2/images/lifecycle.png>
+[i11]: ./images/cmd-emptystatus.png
+[i12]: ./images/cmd-untrackedstatus.png
