@@ -136,6 +136,14 @@ As soon as we add a file to the directory, Git picks it up and reports it as *un
 
 ![git status untracked file][i12]
 
+#### Track a file
+
+We can tell Git to track changes to this file by using the `git add <pattern>` command. In this case, we could use `git add .` (meaning add everything in the current directory) or `git add hello.txt` (meaning only add the specific file).
+
+![git status add file][i13]
+
+This has immediately moved the file to the staging area, ready to be committed. Once committed, the file will be tracked and Git will pick up any changes that are made to it.
+
 
 
 
@@ -155,3 +163,4 @@ As soon as we add a file to the directory, Git picks it up and reports it as *un
 [i10]: <https://git-scm.com/book/en/v2/images/lifecycle.png>
 [i11]: ./images/cmd-emptystatus.png
 [i12]: ./images/cmd-untrackedstatus.png
+[i13]: ./images/cmd-addfilestatus.png
