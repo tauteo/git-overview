@@ -28,6 +28,26 @@ In fact, it is common to create a local repository first, then commit many chang
 
 As a result of how Git works, it is usually much faster and more reliable than a CVCS.
 
+### How does Git actually work
+
+#### Data model
+
+In most other version control system (central or distributed), information is stored as a list of file-based changes. This means that the version control systems think of their stored information as a set of files and *changes made to these files* over time (in other words an initial file plus changes). Such a model is called **delta-based** version control.
+
+This means that in order to get version-x of a file, we download the initial file and **apply all of the deltas** until we get to the requested version.
+
+![delta-vc][i3]
+
+Git does not work this way!
+
+Instead of thinking of information as a set of deltas from an initial file, Git thinks of information as a series of file-system snapshots. Every commit you create generates a new snapshot and stores the snapshot using a reference (also called a commit id, this reference is a 40-character SHA-1 hash).
+
+The snapshots store a complete image of what the tracked file system looked like at the time of the commit, but importantly, unchanged files are just stored as a soft link to their equivalent in the previous snapshot.
+
+![snapshot-vc][i4]
+
+This provides some significant benefits, as each commit is simply a pointer to a snapshot. As an example, branching is made easier and much cheaper in this model, as a branch is simply a named pointer to a specific commit (and not a deep copy with a common ancestor). All of the commits on the branch after the initial operation occur on a parallel series of snapshots.
+
 
 [1]: <https://git-scm.com/book/en/v2>
 [2]: <https://nvie.com/posts/a-successful-git-branching-model/>
