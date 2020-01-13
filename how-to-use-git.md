@@ -69,5 +69,21 @@ The following actions are covered:
 1. How to create a new repository
 2. How clone an existing repository
 
+### Creating a new repository
+
+#### Creating a new repository on the command line
+
+It is very simple to create a new repository on the command line. Simply change to the directory you want the repository to be in and type the command `git init`. This adds the `.git` directory that contains all of the necessary repository files. At this point, the repository is *empty*.
+
+![git init from command line][i6]
+
+#### Creating a new repository in Sourcetree
+
+In Sourcetree, you can create a new repository by either clicking on `File->Clone/New`, or by choosing `Local` from the repository tab and then clicking on `Create`. This will bring up a "Create a repository" dialog like the following:
+
+![git init from sourctree][i7]
+
+Choose your directory and a name for the repository (the default is the same as the directory name), and click on `Create`. This will create a Git repository in the directory and will automatically open the repository in Sourcetree.
+
 [1]: <https://git-scm.com/book/en/v2>
 [2]: <https://nvie.com/posts/a-successful-git-branching-model/>
