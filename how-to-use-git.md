@@ -4,6 +4,8 @@ This document serves as a reference for those who would like to understand how g
 
 Comparisons with Microsoft Visual SourceSafe are made throughout this document, as that is what is currently used in Columbus.
 
+The document provides some background on how Git works, which is then followed by a series of step-by-step examples of how to use Git as a version control system. This should serve as practical guidance on how to use Git and what the results of common operations are. Concepts are introduced as needed, and comparisons are made for clarification when necessary. The document does not attempt to champion a specific workflow, although it does use the [GitFlow][2] workflow to illustrate concepts around branching and merging.
+
 ## What is Git and what does it do differently
 
 Most of us are used to some form of centralised version control system [CVCS], for example Subversion, Perforce, or SourceSafe.
