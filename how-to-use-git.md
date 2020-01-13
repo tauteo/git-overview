@@ -1,10 +1,10 @@
 # An overview of Git and how to use it
 
-This document serves as a reference for those who would like to understand how git works, and how they can use it. The content is based on what is available in the [Pro Git book][1], as well as some other sources, although it doesn't cover the topics in nearly as much depth as the book. Please refer to the book if something is unclear.
+This document serves as a reference for those who would like to understand how Git works, and how they can use it. The content is based on what is available in the [Pro Git book][lnk1], as well as some other sources, although it doesn't cover the topics in nearly as much depth as the book. Please refer to the book if something is unclear.
 
 Comparisons with Microsoft Visual SourceSafe are made throughout this document, as that is what is currently used in Columbus.
 
-The document provides some background on how Git works, which is then followed by a series of step-by-step examples of how to use Git as a version control system. This should serve as practical guidance on how to use Git and what the results of common operations are. Concepts are introduced as needed, and comparisons are made for clarification when necessary. The document does not attempt to champion a specific workflow, although it does use the [GitFlow][2] workflow to illustrate concepts around branching and merging.
+The document provides some background on how Git works, which is then followed by a series of step-by-step examples of how to use Git as a version control system. This should serve as practical guidance on how to use Git and what the results of common operations are. Concepts are introduced as needed, and comparisons are made for clarification when necessary. The document does not attempt to champion a specific workflow, although it does use the [GitFlow][lnk2] workflow to illustrate concepts around branching and merging.
 
 ## What is Git and what does it do differently
 
@@ -64,7 +64,7 @@ Changes in the *Working Directory* that were not in the *Staging Area* at the ti
 
 ## Git basics
 
-This section covers the basic of how to use Git. It provides examples of how to perform common operations, both from the command line, as well as from the [Sourctree][3] GUI. Most of the actions discussed in this section only affect the local repository.
+This section covers the basic of how to use Git. It provides examples of how to perform common operations, both from the command line, as well as from the [Sourctree][lnk3] GUI. Most of the actions discussed in this section only affect the local repository.
 
 The following actions are covered:
 
@@ -218,6 +218,9 @@ $ git rm hello.txt
 $ git add hello.md
 ```
 
+[lnk1]: <https://git-scm.com/book/en/v2>
+[lnk2]: <https://nvie.com/posts/a-successful-git-branching-model/>
+[lnk3]: <https://www.sourcetreeapp.com/>
 [lnk4]: <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
 
 [i1]: <https://git-scm.com/book/en/v2/images/centralized.png>
