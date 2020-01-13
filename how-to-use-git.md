@@ -167,8 +167,39 @@ $ git add hello.txt
 $ git commit -m "Say hello to everyone"
 ```
 
+#### Ignoring files
 
+In order to completely prevent Git from tracking a file, we can tell Git to *ignore* the file. This is done by creating a `.gitignore` file in the repo directory (**not** the hidden `.git` directory), and adding filename patterns that should be ignored. An example could be to ignore any compiled binaries (`*.dll`, `*.exe`). It is important to note that once Git has started tracking a file, ignoring it will not work (the file and changes to it will continue to be tracked).
 
+The rules for patterns to ignore are as follows:
+
+* Comment lines start with `#` and are ignored
+* Standard glob patterns are applied recursively throughout the entire working tree
+* Patterns starting with `/` are not applied recursively
+* Patterns ending with `/` specify directories to be ignored
+* Starting with `!` inverts the pattern
+
+Here is an example:
+
+```text
+# ignore all .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in any directory named build
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf
+```
 
 [lnk4]: <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
 
