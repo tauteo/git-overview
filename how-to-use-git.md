@@ -154,6 +154,19 @@ Every commit must have a commit message, which is a short message that describes
 
 If you do not specify a commit message as part of the command, Git opens the default text editor for you in order to allow you to enter a message. The commit proceeds once you close the file with the commit message. If the message is very short, you can include it as part of the command with the `-m` option, like so: `git commit -m "Add file hello.txt"`
 
+#### Seeing what will change
+
+Once a file is tracked, Git will highlight any modifications to the file. You can again see which changes are pending by running `git status`. In addition, the command `git diff` will show you the difference between the file in your working directory (pending changes) and the file in your repo (previously committed). The `diff` command will show you what has been added, what has been removed, and what has been changed. Once you have staged some changes, you can also use `git diff --staged` to see the difference between what has been staged and the repo (i.e. what will be committed next).
+
+![git modify and diff][i15]
+
+Your changes can once again be committed using the following:
+
+```bash
+$ git add hello.txt
+$ git commit -m "Say hello to everyone"
+```
+
 
 
 
@@ -173,3 +186,4 @@ If you do not specify a commit message as part of the command, Git opens the def
 [i12]: ./images/cmd-untrackedstatus.png
 [i13]: ./images/cmd-addfilestatus.png
 [i14]: ./images/cmd-commit.png
+[i15]: ./images/cmd-modifyanddiff.png
