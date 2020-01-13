@@ -60,6 +60,14 @@ Git tracks all changes (current file-system status is different to latest snapsh
 
 Changes in the *Working Directory* that were not in the *Staging Area* at the time of the commit are not added to the repository, but remain waiting to be staged and committed at a later time.
 
+## Git basics
+
+This section covers the basic of how to use Git. It provides examples of how to perform common operations, both from the command line, as well as from the [Sourctree][3] GUI. Most of the actions discussed in this section only affect the local repository.
+
+The following actions are covered:
+
+1. How to create a new repository
+2. How clone an existing repository
 
 [1]: <https://git-scm.com/book/en/v2>
 [2]: <https://nvie.com/posts/a-successful-git-branching-model/>
