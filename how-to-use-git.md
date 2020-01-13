@@ -111,7 +111,21 @@ Cloning from Sourctree is also simple. Either click on `File->Clone/New`, or cli
 
 ![git clone from sourctree][i9]
 
-### Recording changes
+### Making and storing changes
+
+When you first add a file to a directory that contains a Git repo, Git does not automatically keep a history of the file. A file's status can be either `tracked` (meaning that Git keeps a history of the file) or `untracked` (meaning that Git does not keep a history of the file). Files that are `tracked` can have status `unmodified`, `modified`, or `staged`. The typical lifecycle of a file in a Git repo is *Untracked*->*Staged*->*Unmodified*->*Modified*->*Staged* and so on.
+
+![git-lifecycle][i10]
+
+There are several commands that you use to interact with files and the repository. These are
+
+* `git status` (shows the current status of the repository)
+* `git add <pattern> (stage all files matching the pattern to be tracked in the repo)
+* `git diff` (shows the difference between the working directory and the repo)
+* `git commit` (commits the staged changes to the repo)
+* `git rm` (remove the file from the repo, file becomes untracked)
+* `git mv` (move the file to a different location, but keeps the history)
+
 
 
 
@@ -128,3 +142,4 @@ Cloning from Sourctree is also simple. Either click on `File->Clone/New`, or cli
 [i7]: ./images/srctree-init.png
 [i8]: ./images/cmd-clone.png
 [i9]: ./images/srctree-clone.png
+[i10]: <https://git-scm.com/book/en/v2/images/lifecycle.png>
