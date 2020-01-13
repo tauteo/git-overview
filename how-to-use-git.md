@@ -48,6 +48,18 @@ The snapshots store a complete image of what the tracked file system looked like
 
 This provides some significant benefits, as each commit is simply a pointer to a snapshot. As an example, branching is made easier and much cheaper in this model, as a branch is simply a named pointer to a specific commit (and not a deep copy with a common ancestor). All of the commits on the branch after the initial operation occur on a parallel series of snapshots.
 
+#### Change model
+
+As a consequence of the snapshot model, Git can store individual changes *inside* a file in a commit. This means that conceptually unrelated changes can be made in the same file, at the same time, but do not need to form part of the same commit. This is simply not possible in delta-based version control, as the entire file and all of its contents form part of the check-in (i.e. there are no check-ins of partial content).
+
+In order to achieve this, Git has a separate logical area before a change is committed to the repository. The three stages are thus the *Working Directory*, the *Staging Area*, and the *Repository*.
+
+![git-areas][i5]
+
+Git tracks all changes (current file-system status is different to latest snapshot) in the *Working Directory*, which shows a file as **modified**. These changes can then be **staged** (into the *Staging Area*) either as a wholesale file, or as individual changes. The changes in the *Staging Area* can then be **committed** to the repository.
+
+Changes in the *Working Directory* that were not in the *Staging Area* at the time of the commit are not added to the repository, but remain waiting to be staged and committed at a later time.
+
 
 [1]: <https://git-scm.com/book/en/v2>
 [2]: <https://nvie.com/posts/a-successful-git-branching-model/>
