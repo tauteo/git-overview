@@ -70,6 +70,10 @@ The following actions are covered:
 
 1. How to create a new repository
 2. How clone an existing repository
+3. How to record changes to the repository
+4. How to view the commit history
+5. How to undo
+6. How to tag commits
 
 ### Creating a new repository
 
