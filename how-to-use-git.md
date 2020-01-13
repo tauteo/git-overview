@@ -201,6 +201,23 @@ doc/*.txt
 doc/**/*.pdf
 ```
 
+#### Removing files
+
+If it ever becomes necessary to completely remove a file from Git (i.e. don't track it any more), you can use the `git rm <pattern>` command. This removes the file from Git, **but also deletes the file** from your working directory (otherwise it would just show up as *untracked* again). It is important that this **does not** delete the file from the tracking history! Restoring a snapshot that contained the file as part of a commit will restore the actual file as well.
+
+#### Moving files
+
+For the last of the basics, we will discuss moving a file. Since Git does not actually track directories, moving a file is invisible to it (it is equivalent to deleting and adding a similarly named file elsewhere). Git will usually detect this as a rename, but it is safer to do this using `git mv hello.txt hello.md` (as this will preserve history). This is equivalent to doing the following:
+
+```bash
+# first move the file without Git's help
+$ mv hello.txt hello.md
+
+# then remove the old file and track the new file
+$ git rm hello.txt
+$ git add hello.md
+```
+
 [lnk4]: <http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
 
 [i1]: <https://git-scm.com/book/en/v2/images/centralized.png>
