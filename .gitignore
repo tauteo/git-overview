@@ -1,0 +1,5 @@
+# ignore sub-directories of slides (this contains javascript needed for the slideshow)
+slides/**/
+
+# ignore automatically generated html presentation
+git-howto.html
