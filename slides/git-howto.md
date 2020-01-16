@@ -2,6 +2,16 @@
 title: 'How to use Git: a practical guide'
 author: Otto Taute
 date: 2019-01-14
+theme: solarized
+transition: fade
+slideNumber: false
+previewLinks: true
+fig-width: 5
+fig-caption: false
+embedded: true
+width: 1920
+height: 1080
+center: false
 ---
 
 # What is Git?
