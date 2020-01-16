@@ -70,7 +70,7 @@ The following actions are covered:
 
 1. How to create a new repository
 2. How clone an existing repository
-3. How to record changes to the repository
+3. How to make and store changes
 4. How to view the commit history
 5. How to undo
 6. How to tag commits
@@ -207,7 +207,7 @@ If it ever becomes necessary to completely remove a file from Git (i.e. don't tr
 
 #### Moving files
 
-For the last of the basics, we will discuss moving a file. Since Git does not actually track directories, moving a file is invisible to it (it is equivalent to deleting and adding a similarly named file elsewhere). Git will usually detect this as a rename, but it is safer to do this using `git mv hello.txt hello.md` (as this will preserve history). This is equivalent to doing the following:
+For the last of making and storing changes, we will discuss moving a file. Since Git does not actually track directories, moving a file is invisible to it (it is equivalent to deleting and adding a similarly named file elsewhere). Git will usually detect this as a rename, but it is safer to do this using `git mv hello.txt hello.md` (as this will preserve history). This is equivalent to doing the following:
 
 ```bash
 # first move the file without Git's help
