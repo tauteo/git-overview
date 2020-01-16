@@ -218,6 +218,10 @@ $ git rm hello.txt
 $ git add hello.md
 ```
 
+### Viewing the commit history
+
+
+
 [lnk1]: <https://git-scm.com/book/en/v2>
 [lnk2]: <https://nvie.com/posts/a-successful-git-branching-model/>
 [lnk3]: <https://www.sourcetreeapp.com/>
