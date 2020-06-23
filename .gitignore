@@ -3,3 +3,4 @@ slides/**/
 
 # ignore automatically generated html presentation
 git-howto.html
+node_modules
